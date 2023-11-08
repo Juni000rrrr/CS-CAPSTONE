@@ -61,12 +61,14 @@
         </div>
       </div>
       <script>
+        count = 0;
         document.getElementById("title").style.color = "blue";
         document.getElementById("title").innerHTML = "About Me";
         function nextPic() {
-          if (document.getElementById("photo").src == "aboutJunior.png") {
+          count++;
+          if (count%2 == 1) {
             document.getElementById("photo").src = "aboutJunior2.png";
-          } else {
+          } else if (count%2 == 0){
             document.getElementById("photo").src = "aboutJunior.png";
           }
         }
